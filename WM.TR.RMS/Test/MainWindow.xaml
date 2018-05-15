@@ -17,7 +17,7 @@
         </Style>
         <XmlDataProvider x:Key="InventoryData" XPath="Inventory/Books">
             <x:XData>
-                <Supermarket xmlns="""">
+                <Supermarket>
                     <Fruits>
                         <Fruit Name="Peach"/>
                         <Fruit Name="Banana"/>

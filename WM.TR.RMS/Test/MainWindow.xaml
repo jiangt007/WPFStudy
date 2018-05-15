@@ -10,6 +10,26 @@
     <!--cc-->
     <Window.Resources>
         <sys:String x:Key="myString">HELLO WPF RESOURCE!</sys:String>
+        <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <XmlDataProvider x:Key="InventoryData" XPath="Inventory/Books">
+            <x:XData>
+                <Supermarket xmlns="""">
+                    <Fruits>
+                        <Fruit Name="Peach"/>
+                        <Fruit Name="Banana"/>
+                        <Fruit Name="Orange"/>
+                    </Fruits>
+                    <Darinks>
+                        <Darink Name ="Coca Cola"/>
+                        <Darink Name ="PEPSI Cola"/>
+                    </Darinks>
+                </Supermarket>
+            </x:XData>
+        </XmlDataProvider>
     </Window.Resources>
     <StackPanel Background="AliceBlue">
         <TextBox x:Name="textBox1" Text="{Binding ElementName=slider1,Path=Value,Mode=OneWay}" Margin="5" />
@@ -68,5 +88,8 @@
                 </Ellipse.Fill>
             </Ellipse>
         </Grid>
+        <Button Content="OK"/>
+        <Button Content="OK"/>
+        <Button Content="ok" Style="{x:Null}"/>
     </StackPanel>
 </Window>

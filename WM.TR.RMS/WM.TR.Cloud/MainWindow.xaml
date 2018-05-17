@@ -1,0 +1,33 @@
+﻿<Window x:Class="WM.TR.Cloud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WM.TR.Cloud"
+        mc:Ignorable="d"
+        Title="Material Design in XAML" Height="800" Width="1100" WindowState="Maximized"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto">
+    <DockPanel>
+        <local:ColorZone Padding="16"
+                                            Mode="PrimaryMid" DockPanel.Dock="Top">
+            <DockPanel>
+                <ToggleButton  IsChecked="False"
+                                        x:Name="MenuToggleButton" />
+                <local:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                    <StackPanel>
+                        <Button Content="Hello World" Click="MenuPopupButton_OnClick" />
+                        <Button Content="Nice Popup" Click="MenuPopupButton_OnClick" />
+                        <Button Content="Can't Touch This" IsEnabled="False" />
+                        <Separator />
+                        <Button Content="Goodbye" Click="MenuPopupButton_OnClick" />
+                    </StackPanel>
+                </local:PopupBox>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Material Design In XAML Toolkit</TextBlock>
+            </DockPanel>
+        </local:ColorZone>
+    </DockPanel>
+</Window>

@@ -14,12 +14,7 @@ namespace WM.TR.RMS.Domain
 
             DemoItems = new[]
             {
-                new DemoItem("Cards", new Cards(), new []
-                    {
-                        DocumentationLink.DemoPageLink<Cards>(),
-                        DocumentationLink.StyleLink("Card"),
-                        DocumentationLink.ApiLink<Card>()
-                    })
+                new DemoItem("Cards", new Cards(), null)
                 {
                     VerticalScrollBarVisibilityRequirement = ScrollBarVisibility.Auto
                 },

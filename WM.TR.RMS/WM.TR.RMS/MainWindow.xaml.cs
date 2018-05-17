@@ -59,5 +59,13 @@ namespace WM.TR.RMS
         {
             this.Close();
         }
+
+        private void Test()
+        {
+            //Binding binding = new Binding();
+            //binding.Path = sele
+            //binding.Source = this.DemoItemsListBox;
+            //scrollViewer.HorizontalScrollBarVisibility =
+        }
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WM.TR.RMS", "WM.TR.RMS\WM.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{911F0269-76EE-47F4-ABA8-23A240727FDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WM.TR.Cloud", "WM.TR.Cloud\WM.TR.Cloud.csproj", "{016269AE-AF5D-4F6B-9725-260C84178E90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AppVeyor|Any CPU = AppVeyor|Any CPU
@@ -50,6 +52,12 @@ Global
 		{911F0269-76EE-47F4-ABA8-23A240727FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{911F0269-76EE-47F4-ABA8-23A240727FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{911F0269-76EE-47F4-ABA8-23A240727FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{016269AE-AF5D-4F6B-9725-260C84178E90}.AppVeyor|Any CPU.ActiveCfg = Release|Any CPU
+		{016269AE-AF5D-4F6B-9725-260C84178E90}.AppVeyor|Any CPU.Build.0 = Release|Any CPU
+		{016269AE-AF5D-4F6B-9725-260C84178E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{016269AE-AF5D-4F6B-9725-260C84178E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{016269AE-AF5D-4F6B-9725-260C84178E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{016269AE-AF5D-4F6B-9725-260C84178E90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

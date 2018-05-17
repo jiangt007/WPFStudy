@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ShowMeTheXAML;
 
 namespace WM.TR.RMS
 {
@@ -35,24 +36,21 @@ namespace WM.TR.RMS
             //mainPanel.ad
         }
 
-        //private void AddProgramControl(BoxItem element)
-        //{
-        //    //WrapPanel lastElement = elementList[elementList.Count - 1];
-        //    //if (lastElement.Children.Count == 24)
-        //    //{
-        //    //    lastElement.Children.Remove(addPanel);
-        //    //    lastElement.Children.Add(element);
-        //    //    ItemTool itemTool = new ItemTool();
-        //    //    itemTool.Height = GetPageHieght();
-        //    //    itemTool.Width = GetPageWidth();
-        //    //    itemTool.wpPancels.Children.Clear();
-        //    //    itemTool.wpPancels.Children.Add(addPanel);
-        //    //    AddPage(itemTool);
-        //    //}
-        //    //else
-        //    //{
-        //    //    lastElement.Children.Insert(lastElement.Children.Count - 1, element);
-        //    //}
-        //}
+        private void AddProgramControl(DeviceStatus status)
+        {
+            XamlDisplay xamlDisplay = new XamlDisplay()
+            {
+                Margin = new Thickness(0, 0, 0, 0),
+                VerticalContentAlignment = VerticalAlignment.Top
+            };
+        }
+    }
+
+    public class DeviceStatus
+    {
+        private string deviceName;
+        private string ip;
+        private string status;
+        private string content;
     }
 }

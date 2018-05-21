@@ -15,8 +15,8 @@
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.GridSplitter.xaml" />
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.GroupBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.Hyperlink.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/materialdesigntheme.Label.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/materialdesigntheme.Listbox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.Label.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.ListBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.Menu.xaml" />
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.PasswordBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.ProgressBar.xaml" />
@@ -37,10 +37,10 @@
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.ListView.xaml" />
         <ResourceDictionary Source="pack://application:,,,/TR.Cloud;component/Themes/MaterialDesignTheme.ValidationErrorTemplate.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <SolidColorBrush x:Key="MaterialDesignLightBackground" Color="#FFFAFAFA"/>
-    <SolidColorBrush x:Key="MaterialDesignLightForeground" Color="#DD000000"/>
-    <SolidColorBrush x:Key="MaterialDesignDarkBackground" Color="#FF303030"/>
-    <SolidColorBrush x:Key="MaterialDesignDarkForeground" Color="#FFFAFAFA"/>
+    <SolidColorBrush x:Key="MaterialDesignLightBackground" Color="#FFFAFAFA" />
+    <SolidColorBrush x:Key="MaterialDesignLightForeground" Color="#DD000000" />
+    <SolidColorBrush x:Key="MaterialDesignDarkBackground" Color="#FF303030" />
+    <SolidColorBrush x:Key="MaterialDesignDarkForeground" Color="#FFFAFAFA" />
     <SolidColorBrush x:Key="MaterialDesignDarkSeparatorBackground" Color="#1F000000" />
     <SolidColorBrush x:Key="MaterialDesignLightSeparatorBackground" Color="#1FFFFFFF" />
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignRaisedButton}" />
@@ -81,11 +81,11 @@
     <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource MaterialDesignMenuItem}" />
     <Style x:Key="{x:Static MenuItem.SeparatorStyleKey}" TargetType="{x:Type Separator}" BasedOn="{StaticResource MaterialDesignSeparator}" />
     <Style x:Key="MaterialDesignDarkSeparator" TargetType="{x:Type Separator}" BasedOn="{StaticResource MaterialDesignSeparator}">
-        <Setter Property="Background" Value="{DynamicResource MaterialDesignDarkSeparatorBackground}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDarkSeparatorBackground}"/>
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignDarkSeparatorBackground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDarkSeparatorBackground}" />
     </Style>
     <Style x:Key="MaterialDesignLightSeparator" TargetType="{x:Type Separator}" BasedOn="{StaticResource MaterialDesignSeparator}">
-        <Setter Property="Background" Value="{DynamicResource MaterialDesignLightSeparatorBackground}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignLightSeparatorBackground}"/>
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignLightSeparatorBackground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignLightSeparatorBackground}" />
     </Style>
 </ResourceDictionary>

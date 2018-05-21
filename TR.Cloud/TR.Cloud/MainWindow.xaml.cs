@@ -28,5 +28,23 @@ namespace TR.Cloud
         private void MenuPopupButton_OnClick(object sender, RoutedEventArgs e)
         {
         }
+
+        private void buttonExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void btn_Repair_Click(object sender, RoutedEventArgs e)
+        {
+            //stackPanelRight.Children.Clear();
+            //UserControl userControl = null;
+            //userControl = new CustomerRepairUserControl();
+            StateMonitoringCards stateMonitoringCards = new StateMonitoringCards();
+            stackPanelRight.Children.Add(stateMonitoringCards);
+        }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.Cloud", "TR.Cloud\TR.Cloud.csproj", "{5E85204D-F9CF-403C-9989-94051F37CECF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{DBF2AB25-7605-45F6-ACC7-2F4B55084433}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5E85204D-F9CF-403C-9989-94051F37CECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E85204D-F9CF-403C-9989-94051F37CECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E85204D-F9CF-403C-9989-94051F37CECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF2AB25-7605-45F6-ACC7-2F4B55084433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF2AB25-7605-45F6-ACC7-2F4B55084433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF2AB25-7605-45F6-ACC7-2F4B55084433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF2AB25-7605-45F6-ACC7-2F4B55084433}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,6 @@
              xmlns:local="clr-namespace:TR.Cloud"
              mc:Ignorable="d"
              d:DesignHeight="800" d:DesignWidth="1000">
-    <WrapPanel x:Name="cardsWarpPanel" Orientation="Horizontal" Margin="8 8 8 8">
+    <WrapPanel x:Name="cardsWarpPanel" Orientation="Horizontal" Background="AliceBlue" Margin="8 8 8 8">
     </WrapPanel>
 </UserControl>

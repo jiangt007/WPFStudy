@@ -14,50 +14,27 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TR.Cloud.Model;
 
-namespace TR.Cloud
+namespace Test
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
     public partial class MainWindow : Window
     {
-        private StateMonitoringCards stateMonitoringCards = new StateMonitoringCards();
+        private TRDeviceStation deviceInfo = new TRDeviceStation();
 
         public MainWindow()
         {
             InitializeComponent();
-            Button_Click(null, null);
-        }
-
-        private void MenuPopupButton_OnClick(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void buttonExit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            stackPanelRight.Children.Add(stateMonitoringCards);
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-        }
-
-        private void buttonTest_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Test();
+            this.textBlockTest.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath("Ip"), Source = deviceInfo });
+            this.textBlockTest1.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath("Satus.AlarmMassList"), Source = deviceInfo });
         }
 
         private int index = 0;
 
-        private void Test()
+        private void iniBinding()
         {
             index++;
-            TRDeviceStation deviceInfo = new TRDeviceStation();
             deviceInfo.SerialNo = "TR-2000DC-170";
             deviceInfo.Ip = "192.168.1.1 " + index.ToString();
             deviceInfo.Device.DeviceModel = "TR-2000DC" + index.ToString();
@@ -68,7 +45,11 @@ namespace TR.Cloud
             deviceInfo.Satus.IsAlarm = true;
             deviceInfo.Satus.AlarmMassList = "TNT HMX" + index.ToString();
             deviceInfo.Satus.User = "SurperUser";
-            stateMonitoringCards.AddCard(deviceInfo);
+        }
+
+        private void buttonTest_Click(object sender, RoutedEventArgs e)
+        {
+            iniBinding();
         }
     }
 }

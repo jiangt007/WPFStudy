@@ -26,7 +26,7 @@
         <Grid Margin="0 0 0 0" Grid.Column="0" Grid.RowSpan="2">
 
             <!--左侧菜单栏-->
-            <ListBox Margin="0 0 0 0">
+            <ListBox Margin="0 0 0 0" SelectionChanged="ListBox_SelectionChanged">
                 <ListBox.Effect>
                     <DropShadowEffect BlurRadius="24" Color="#FF858484" Direction="90" ShadowDepth="1" />
                 </ListBox.Effect>
@@ -43,6 +43,11 @@
                         <TextBlock HorizontalAlignment="Center">文本内容</TextBlock>
                     </StackPanel>
                 </ItemsControl>
+                <ItemsControl>
+                    <StackPanel Margin="3 3 3 3" Orientation="Horizontal" Height="50">
+                        <Button x:Name="buttonTest" Content="测试" MouseDoubleClick="buttonTest_MouseDoubleClick" />
+                    </StackPanel>
+                </ItemsControl>
             </ListBox>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="0">
@@ -51,7 +56,7 @@
 
         <ScrollViewer Grid.Column="1" Grid.Row="1" x:Name="scr" Margin="0" VerticalScrollBarVisibility="Auto">
             <!--右侧功能处理-->
-            <WrapPanel Name="stackPanelRight"  local:ShadowAssist.ShadowDepth="Depth3">
+            <WrapPanel Name="stackPanelRight">
                 <!--<WrapPanel.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                         <GradientStop Color="#f3fbfa" Offset="0.0" />

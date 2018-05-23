@@ -1,0 +1,14 @@
+﻿<Window x:Class="Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock x:Name="textBlockTest" Text="测试" />
+        <TextBlock x:Name="textBlockTest1" Text="测试" />
+        <Button x:Name="buttonTest" Content="点击"  Click="buttonTest_Click" />
+    </StackPanel>
+</Window>

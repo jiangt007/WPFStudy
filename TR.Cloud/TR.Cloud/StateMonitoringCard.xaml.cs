@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,7 +24,7 @@ namespace TR.Cloud
     {
         #region private
 
-        private TRDeviceStation trStation = null;
+        private TRDeviceStation trStation = new TRDeviceStation();
 
         #endregion private
 
@@ -36,30 +37,29 @@ namespace TR.Cloud
         public StateMonitoringCard()
         {
             InitializeComponent();
+            IniBinding();
         }
 
         public StateMonitoringCard(TRDeviceStation tRDeviceStation)
         {
             InitializeComponent();
             IniBinding();
-            SetValue(tRDeviceStation);
+            ReflashData(tRDeviceStation);
         }
 
         private void IniBinding()
         {
-            trStation = new TRDeviceStation();
-
-            textStatus.SetBinding(TextBox.TextProperty, new Binding("/Name") { Source = trStation });
-            textInfo.SetBinding(TextBox.TextProperty, new Binding("/Provinces/Name") { Source = trStation });
-            textDeviceNO.SetBinding(TextBox.TextProperty, new Binding("/Provinces/Citys/Name") { Source = trStation });
-            textIP.SetBinding(TextBox.TextProperty, new Binding("/Provinces/Citys/Name") { Source = trStation });
+            if (trStation == null)
+                trStation = new TRDeviceStation();
+            this.textStatus.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath("Satus.Status"), Source = trStation });
+            this.textInfo.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath("Satus.AlarmMassList"), Source = trStation });
+            this.textDeviceNO.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath("SerialNo"), Source = trStation });
+            this.textIP.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath("Ip"), Source = trStation });
         }
 
-        private bool SetValue(TRDeviceStation tRDeviceStation)
+        public bool ReflashData(TRDeviceStation tRDeviceStation)
         {
-            if (tRDeviceStation == null)
-                return false;
-            trStation = tRDeviceStation;
+            trStation.SetValue(tRDeviceStation);
             return true;
         }
     }

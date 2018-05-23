@@ -21,45 +21,46 @@ namespace TR.Cloud
     /// </summary>
     public partial class StateMonitoringCards : UserControl
     {
-        private Dictionary<string, TRDeviceStation> dicDeviceInfo = new Dictionary<string, TRDeviceStation>();
+        private Dictionary<string, StateMonitoringCard> dicDeviceInfo = new Dictionary<string, StateMonitoringCard>();
 
         public StateMonitoringCards()
         {
             InitializeComponent();
-            Test();
+            //Test();
         }
 
         public void AddCard(TRDeviceStation deviceInfo)
         {
             if (dicDeviceInfo.ContainsKey(deviceInfo.SerialNo))
             {
-                dicDeviceInfo[deviceInfo.SerialNo] = deviceInfo;
+                dicDeviceInfo[deviceInfo.SerialNo].TrStation.SetValue(deviceInfo);
             }
             else
             {
-                dicDeviceInfo.Add(deviceInfo.SerialNo, deviceInfo);
-                StateMonitoringCard stateMonitoringCard = new StateMonitoringCard(dicDeviceInfo[deviceInfo.SerialNo]);
+                StateMonitoringCard stateMonitoringCard = new StateMonitoringCard();
+                stateMonitoringCard.ReflashData(deviceInfo);
+                dicDeviceInfo.Add(deviceInfo.SerialNo, stateMonitoringCard);
                 this.cardsWarpPanel.Children.Add(stateMonitoringCard);
             }
         }
 
-        private void Test()
-        {
-            for (int i = 1; i < 20; i++)
-            {
-                TRDeviceStation deviceInfo = new TRDeviceStation();
-                deviceInfo.SerialNo = "TR-2000DC-170" + i.ToString();
-                deviceInfo.Ip = "192.168.1.1";
-                deviceInfo.Device.DeviceModel = "TR-2000DC";
-                deviceInfo.Device.SoftWareVersion = "1.1.1701";
-                deviceInfo.Device.MassVersion = "9.19.11.1";
+        //private void Test()
+        //{
+        //    for (int i = 1; i < 20; i++)
+        //    {
+        //        TRDeviceStation deviceInfo = new TRDeviceStation();
+        //        deviceInfo.SerialNo = "TR-2000DC-170" + i.ToString();
+        //        deviceInfo.Ip = "192.168.1.1";
+        //        deviceInfo.Device.DeviceModel = "TR-2000DC";
+        //        deviceInfo.Device.SoftWareVersion = "1.1.1701";
+        //        deviceInfo.Device.MassVersion = "9.19.11.1";
 
-                deviceInfo.Satus.Status = "正在检测";
-                deviceInfo.Satus.IsAlarm = true;
-                deviceInfo.Satus.AlarmMassList = "TNT HMX";
-                deviceInfo.Satus.User = "SurperUser";
-                AddCard(deviceInfo);
-            }
-        }
+        //        deviceInfo.Satus.Status = "正在检测";
+        //        deviceInfo.Satus.IsAlarm = true;
+        //        deviceInfo.Satus.AlarmMassList = "TNT HMX";
+        //        deviceInfo.Satus.User = "SurperUser";
+        //        AddCard(deviceInfo);
+        //    }
+        //}
     }
 }

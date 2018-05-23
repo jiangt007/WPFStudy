@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPFIcoFont.ICOList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:WPFIcoFont"
+        Title="ICO文字列表" Height="500" Width="1200">
+    <Window.Resources>
+        <converters:ICOConverter x:Key="ICOConverter" />
+    </Window.Resources>
+    <Grid>
+        <ListBox x:Name="ListB">
+            <ListBox.Template>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <WrapPanel Orientation="Horizontal" IsItemsHost="True" ScrollViewer.CanContentScroll="True" />
+                    </ScrollViewer>
+                </ControlTemplate>
+            </ListBox.Template>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Path=name, Converter={StaticResource ICOConverter}}" Style="{StaticResource FontAwesome}" FontSize="50" Margin="5" Foreground="Black"></TextBlock>
+                        <TextBox Text="{Binding Path=name}"></TextBox>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPFIcoFont.FontAwesome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ICO字体示例" Height="350" Width="525">
+    <Grid>
+        <WrapPanel Orientation="Horizontal">
+        <TextBlock Text="&#xf022;" Style="{StaticResource FontAwesome}" FontSize="50" Margin="5" Foreground="Green"></TextBlock>
+        <TextBlock Name="txtbFont" Style="{StaticResource FontAwesome}" FontSize="50" Margin="5" Foreground="Green"></TextBlock>
+            <Button Click="Button_Click" Content="查看ICO文字列表" Margin="5" Foreground="Green" Width="200"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>

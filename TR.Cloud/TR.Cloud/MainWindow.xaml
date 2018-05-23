@@ -2,6 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:TR.Cloud"
+        xmlns:comControls ="clr-namespace:TR.Cloud.Controls"
+        xmlns:res ="clr-namespace:TR.Cloud.Properties"
         WindowStartupLocation="CenterScreen"
         Width="1024" Height="768"
         Title="XXX管理系统V1.1.001版">
@@ -32,14 +34,16 @@
                 </ListBox.Effect>
 
                 <ItemsControl>
-                    <StackPanel>
-                        <Image  Source="Resources/status.png" />
-                        <TextBlock FontSize="20" >文本内容</TextBlock>
+                    <StackPanel  Orientation="Horizontal">
+                        <!--<comControls:PackIcon Kind="Settings"  Height="30" Width="30" Margin="0,3,0,0" />-->
+                        <!--<Image Width=" 30" Height="30" Source="Resources.parameterSetting" />-->
+                        <!--TextBlock FontSize="20" >文本内容 </TextBlock> -->
                     </StackPanel>
                 </ItemsControl>
                 <ItemsControl>
                     <StackPanel Margin="3 3 3 3" Orientation="Horizontal" Height="50">
-                        <Image Source="Resources/status.png" />
+                        <Image Source="Images/vs.png" />
+                        <Image Width=" 30" Height="30" Source="res:component/Resources/parameterSetting" />
                         <TextBlock HorizontalAlignment="Center">文本内容</TextBlock>
                     </StackPanel>
                 </ItemsControl>

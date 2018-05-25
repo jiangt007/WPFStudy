@@ -64,38 +64,41 @@
     <Compile Include="Controls\PackIcon\PackIconDataFactory.cs" />
     <Compile Include="Controls\PackIcon\PackIconExtension.cs" />
     <Compile Include="Controls\PackIcon\PackIconKind.cs" />
-    <Compile Include="CustomerRepairUserControl.xaml.cs">
-      <DependentUpon>CustomerRepairUserControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Model\BasicInfo.cs" />
     <Compile Include="Model\RealTimeSatus.cs" />
     <Compile Include="Model\TRDeviceStation.cs" />
-    <Compile Include="ShadowAssist.cs" />
-    <Compile Include="StateMonitoringCard.xaml.cs">
+    <Compile Include="ViewModels\BasicInfo.cs" />
+    <Compile Include="ViewModels\RealTimeSatus.cs" />
+    <Compile Include="ViewModels\TRDeviceStation.cs" />
+    <Compile Include="Views\CustomerRepairUserControl.xaml.cs">
+      <DependentUpon>CustomerRepairUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShadowAssist.cs" />
+    <Compile Include="Views\StateMonitoringCard.xaml.cs">
       <DependentUpon>StateMonitoringCard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StateMonitoringCards.xaml.cs">
+    <Compile Include="Views\StateMonitoringCards.xaml.cs">
       <DependentUpon>StateMonitoringCards.xaml</DependentUpon>
     </Compile>
-    <Page Include="CustomerRepairUserControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MaterialDesignTheme.Shadows.xaml">
+    <Page Include="Views\CustomerRepairUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="StateMonitoringCard.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\MaterialDesignTheme.Shadows.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="StateMonitoringCards.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\StateMonitoringCard.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StateMonitoringCards.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +128,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\parameterSetting.png" />
@@ -144,6 +149,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

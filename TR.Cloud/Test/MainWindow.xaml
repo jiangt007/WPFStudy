@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <TextBlock x:Name="textBlockTest" Text="测试" />
-        <TextBlock x:Name="textBlockTest1" Text="测试" />
+        <TextBox x:Name="textBox1" />
+        <TextBox x:Name="textBox2" />
         <Button x:Name="buttonTest" Content="点击"  Click="buttonTest_Click" />
     </StackPanel>
 </Window>

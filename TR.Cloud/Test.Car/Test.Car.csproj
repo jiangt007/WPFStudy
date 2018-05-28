@@ -76,6 +76,7 @@
     <Compile Include="CarListItemView.xaml.cs">
       <DependentUpon>CarListItemView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IValueConverter\AutomarkerToLogoPathConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

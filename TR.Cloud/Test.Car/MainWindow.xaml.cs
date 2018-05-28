@@ -34,21 +34,22 @@ namespace Test.Car
                 new Car(){ AutoMaker="xiaoke" ,Name = "逍客",Year="2018",TopSpeed="150"},
                 new Car(){ AutoMaker="xrv" ,Name = "XR-V",Year="2018",TopSpeed="150"}
             };
-            foreach (Car car in cars)
-            {
-                CarListItemView carItem = new CarListItemView();
-                carItem.Car = car;
-                this.listBoxCars.Items.Add(carItem);
-            }
+            //foreach (Car car in cars)
+            //{
+            //    CarListItemView carItem = new CarListItemView();
+            //    carItem.Car = car;
+            //    this.listBoxCars.Items.Add(carItem);
+            //}
+            this.listBoxCars.ItemsSource = cars;
         }
 
-        private void listBoxCars_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            CarListItemView view = e.AddedItems[0] as CarListItemView;
-            if (view != null)
-            {
-                this.detailView.Car = view.Car;
-            }
-        }
+        //private void listBoxCars_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    CarListItemView view = e.AddedItems[0] as CarListItemView;
+        //    if (view != null)
+        //    {
+        //        this.detailView.Car = view.Car;
+        //    }
+        //}
     }
 }

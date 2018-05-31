@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="WPFPractice.DeviceDetailInfoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WPFPractice"
+             mc:Ignorable="d"
+             d:DesignHeight="800" d:DesignWidth="250">
+    <UserControl.Resources>
+        <Style x:Key="t1" TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Background" Value="WhiteSmoke" />
+                <Setter Property="Padding" Value="5,7,0,0" />
+            </Style.Setters>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="70*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Background="YellowGreen">
+            <TextBlock Style="{StaticResource t1}" Margin="5 20 5 10" Text="位置" />
+            <TextBlock Style="{StaticResource t1}" Margin="5 5 5 10" Text="型号" />
+            <TextBlock Style="{StaticResource t1}" Margin="5 5 5 10" Text="编号" />
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0" Grid.Column="0" Grid.Row="1" Background="LightGray">
+            <TextBlock Margin="10 10 0 0" Text="状态" />
+            <TextBlock Style="{StaticResource t1}"  Margin="5" Text="待维护" />
+            <TextBlock Margin="10 5 0 0" Text="最近检测" />
+            <TextBlock Style="{StaticResource t1}"  Margin="5" Text="2017-10-11 20:10:10" />
+            <TextBlock Style="{StaticResource t1}"  Margin="5 0 5 5" Text="No.1992" />
+            <TextBlock Margin="10 5 0 0" Text="最近维护滤料" />
+            <TextBlock Style="{StaticResource t1}"  Margin="5" Text="2017-10-11 20:10:10" />
+            <TextBlock Margin="10 5 0 0" Text="运行参数" />
+            <StackPanel Margin="5" Background="WhiteSmoke">
+                <TextBlock Style="{StaticResource t1}" Margin="3" Padding="15 0 0 0" Text="温度:" />
+                <TextBlock Style="{StaticResource t1}" Margin="3" Padding="15 0 0 0" Text="气压:" />
+                <TextBlock Style="{StaticResource t1}" Margin="3" Padding="15 0 0 0" Text="湿度:" />
+            </StackPanel>
+            <TextBlock Margin="10 5 0 0" Text="运行统计" />
+            <StackPanel  Margin="5" Background="WhiteSmoke">
+                <TextBlock Style="{StaticResource t1}" Margin="3" Padding="15 0 0 0" Text="本次运行:" />
+                <TextBlock Style="{StaticResource t1}" Margin="3" Padding="15 0 0 0" Text="检测次数:" />
+                <TextBlock Style="{StaticResource t1}" Margin="3" Padding="15 0 0 0" Text="报警次数:" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

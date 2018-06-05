@@ -1,0 +1,32 @@
+﻿<Window x:Class="TR.DSF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TR.DSF"
+        xmlns:xly="clr-namespace:Util.Controls;assembly=Util.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="StackPanel">
+            <Setter Property="Height" Value="80" />
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="Orientation" Value="Horizontal" />
+            <!--<Setter Property="Background" Value="{StaticResource WindowBackground}" />-->
+        </Style>
+    </Window.Resources>
+    <!--Background="{x:Null}">-->
+    <StackPanel>
+        <xly:FButton FIcon="&#xe11;" Margin="3">系统换转</xly:FButton>
+        <xly:FButton FIcon="&#xe11;" Content="测试"  Style="{StaticResource DefaultFButtonStyle}" Margin="0,25" />
+        <xly:FButton Content="测试" Style="{StaticResource DefaultFButtonStyle}" />
+        <xly:FButton FIcon="&#xe602;" Margin="3">系统换转</xly:FButton>
+        <xly:FButton FIcon="&#xe628;" Margin="3" Width="120" Height="40"  Background="#771C79" MouseOverBackground="#F20BA0"  Click="FButton_Click" >WaitingBox</xly:FButton>
+        <xly:FButton FIcon="&#xe629;" Margin="3" Width="140" Height="40" Background="#12B512" IsDefault="True" MouseOverBackground="#08EE08" Click="FButton_Click_WindowBase">WindowBase</xly:FButton>
+
+        <xly:FButton FIcon="&#xe64f;" Margin="5,0,0,0" CornerRadius="16,0,0,16" Background="#771C79" MouseOverBackground="#F20BA0"  AllowsAnimation="True" Click="FButton_Click_Info">Info</xly:FButton>
+        <xly:FButton FIcon="&#xe628;" CornerRadius="0" Background="#771C79" MouseOverBackground="#F20BA0" Click="FButton_Click_Question">Question</xly:FButton>
+        <xly:FButton FIcon="&#xe628;" CornerRadius="0" Background="#771C79" MouseOverBackground="#F20BA0" Click="FButton_Click_Warning">Warining</xly:FButton>
+        <xly:FButton FIcon="&#xe629;" CornerRadius="0,16,16,0" Background="#771C79" MouseOverBackground="#F20BA0" AllowsAnimation="True" Click="FButton_Click_Error">Error</xly:FButton>
+    </StackPanel>
+</Window>

@@ -12,8 +12,13 @@
                 <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
             </Style.Setters>
         </Style>
+        <Style TargetType="StackPanel">
+            <Style.Setters>
+                <Setter Property="Orientation" Value="Vertical" />
+            </Style.Setters>
+        </Style>
     </Window.Resources>
     <Grid>
-        <local:RealtimeStatus />
+        <local:ScrollViewerUserControl />
     </Grid>
 </Window>
